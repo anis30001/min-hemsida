@@ -47,7 +47,7 @@ footer {
   text-align: left;
   padding: 1rem;
   width: 100%;
-  font-weight: 600;
+  font-wei.abght: 600;
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -68,18 +68,24 @@ h1 {
   margin-bottom: 2rem;
 }
 
-.about-container {
+.about {
   display: flex;
-  align-items: row;
-  justify-content: center;
-}
-.about p,
-pre {
+  flex-direction: row;
   background-color: #e4e1e1;
   font-family: verdana, Arial, Helvetica, sans-serif;
-  display: flex;
   text-align: center;
-  font-size: medium;
+  max-width: auto;
+  margin: auto;
+  padding: auto;
+}
+.about-text {
+  max-width: 500px;
+}
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 /* Generell text */
