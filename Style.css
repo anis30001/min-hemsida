@@ -1,44 +1,43 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Gör att paddingen och kanten inte påverkar elementens storlek */
+  box-sizing: border-box;
 }
 
 html,
 body {
   height: 100%;
   min-height: 100%;
-  overflow-x: hidden; /* Förhindrar horisontell scroll */
+  overflow-x: hidden;
 }
 
 body {
   background-image: url("img/backrunden.jpg");
   background-size: cover;
-  background-position: center; /* Säkerställer att bakgrundsbilden alltid är centrerad */
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  font-family: Arial, sans-serif; /* Lägg till en allmän font för kroppen */
+  font-family: Arial, sans-serif;
   padding: 0;
   margin: 0;
 }
 body::before {
-  content: ""; /* Krävs för att skapa pseudo-elementet */
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Transparent svart färg */
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: -1;
 }
-pre {
-  background-color: #e4e1e1;
-  font-family: verdana, Arial, Helvetica, sans-serif;
+
+main img {
   display: flex;
-  text-align: center;
-  font-size: medium;
+  width: 200px;
+  height: 150px;
 }
 
 /* Footer */
@@ -49,18 +48,16 @@ footer {
   padding: 1rem;
   width: 100%;
   font-weight: 600;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Gör footer bakgrunden lite genomskinlig */
+  background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 footer a {
-  color: inherit; /* Gör att länkarna är samma färg som texten i footern */
+  color: inherit;
   text-decoration: none;
+}
+h3 {
+  color: white;
 }
 
 /* Huvudrubrik */
@@ -69,6 +66,20 @@ h1 {
   text-align: center;
   color: rgb(255, 255, 255);
   margin-bottom: 2rem;
+}
+
+.about-container {
+  display: flex;
+  align-items: row;
+  justify-content: center;
+}
+.about p,
+pre {
+  background-color: #e4e1e1;
+  font-family: verdana, Arial, Helvetica, sans-serif;
+  display: flex;
+  text-align: center;
+  font-size: medium;
 }
 
 /* Generell text */
@@ -204,9 +215,25 @@ main {
   background-color: #005bb5;
 }
 
-/* För att säkerställa att footer alltid syns på botten på små skärmar */
 @media (max-width: 480px) {
   footer {
-    position: static; /* Gör foten relativ på små skärmar */
+    position: static;
   }
+}
+.kontakt-lankar {
+  list-style-type: none;
+  background-color: rgb(27, 27, 27);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.kontakt-lankar a {
+  color: rgb(246, 244, 244);
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+.kontakt-lankar p {
+  text-align: center;
 }
